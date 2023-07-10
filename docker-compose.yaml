@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./web-bds
+      dockerfile: Dockerfile
+    image: frontend:latest
+    ports:
+      - "5173:5173"
+    networks:
+      - frontend-backend-network
+
+  backend:
+    build:
+      context: ./be-bds
+      dockerfile: Dockerfile
+    image: backend:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - frontend-backend-network
+
+networks:
+  frontend-backend-network:
+    driver: bridge
