@@ -16,11 +16,12 @@ Build and start the Docker containers:
 
 
 docker-compose up --build
-Access the web application at http://localhost:3000.
+Access the web application at http://localhost:5173.
 
 Project Structure
 stylus
 
+```
 project-root/
 ├── frontend/
 │   ├── node_modules/
@@ -40,6 +41,8 @@ project-root/
 │   └── ...
 ├── docker-compose.yml
 └── README.md
+```
+
 frontend/ - Frontend source code.
 backend/ - Backend source code.
 docker-compose.yml - Docker Compose configuration file.
